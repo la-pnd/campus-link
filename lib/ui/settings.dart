@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+/* Renz de Sierra
+Team: Fullsnack Devs
+Project Name: Campuslink
+Feature: [STNG-001] Settings
+Feature description: This is the main settings of the app that offers different 
+options to the users while browsing the setting function.
+
+ */
+
+//This is the class for the settings UI that is called in the main dart
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
 
@@ -8,14 +18,14 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Settings"),
-        backgroundColor: Color(0xFF292F3F), // set the background color
-        elevation: 0, // remove the shadow
+        title: const Text('Settings'),
+        backgroundColor: Color(0xFF292F3F), // sets the background color
+        elevation: 0, // removes the shadow
         bottom: PreferredSize(
           preferredSize:
-              const Size.fromHeight(60.0), // set the preferred height
+              const Size.fromHeight(60.0), // sets the preferred height
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(9.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
@@ -28,7 +38,7 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  " Juan Dela Cruz",
+                  "   Juan Dela Cruz",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -50,7 +60,7 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // Handle menu item tap
+              // Handles menu item tap, shows animation that the button has been clicked
             },
           ),
           ListTile(
@@ -62,11 +72,14 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // Handle menu item tap
+              // Handle menu item tap, shows animation that the button has been clicked
             },
           ),
           ListTile(
-            leading: const Icon(Icons.notifications, color: Colors.white),
+            leading: const Icon(
+              Icons.notifications,
+              color: Colors.white,
+            ),
             title: const Text(
               'Notifications and Sounds',
               style: TextStyle(
@@ -74,7 +87,7 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // Handle menu item tap
+              // Handle menu item tap, shows animation that the button has been clicked
             },
           ),
           ListTile(
@@ -86,12 +99,12 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // Handle menu item tap
+              // Handle menu item tap, shows animation that the button has been clicked
             },
           ),
         ],
       ),
-      backgroundColor: Color(0xFF292F3F),
+      backgroundColor: const Color(0xFF292F3F),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           backgroundColor: Color(0xFF292F3F),
@@ -100,6 +113,7 @@ class SettingsScreen extends StatelessWidget {
           selectedLabelStyle: TextStyle(fontSize: 0),
           unselectedLabelStyle: TextStyle(fontSize: 0),
           currentIndex: 2,
+          // this widget is used to create a Navigation Bar in the bottom of the App
           items: const [
             BottomNavigationBarItem(
               label: "",
