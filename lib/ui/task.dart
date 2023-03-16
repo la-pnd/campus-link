@@ -4,45 +4,36 @@ import 'package:google_fonts/google_fonts.dart';
 /* Renz de Sierra
 Team: Fullsnack Devs
 Project Name: Campuslink
-Feature: [STNG-001] Settings
+Feature: [TSKS-001] Tasks
 Feature description: This is the main settings of the app that offers different 
 options to the users while browsing the setting function.
 
  */
 
 //This is the class for the settings UI that is called in the main dart
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
-
+class TaskScreen extends StatelessWidget {
+  const TaskScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings'),
+        title: const Text('TASKS'),
         backgroundColor: Color(0xFF292F3F), // sets the background color
         elevation: 0, // removes the shadow
         bottom: PreferredSize(
           preferredSize:
-              const Size.fromHeight(60.0), // sets the preferred height
+              const Size.fromHeight(20.0), // sets the preferred height
           child: Padding(
             padding: const EdgeInsets.all(9.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  radius: 30,
-                  child: Icon(
-                    Icons.person,
-                    color: Color(0xFF292F3F),
-                  ),
-                ),
                 Text(
-                  "   Juan Dela Cruz",
+                  "  Individual Tasks",
                   style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontStyle: FontStyle.italic),
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
                 ),
               ],
             ),
@@ -52,9 +43,9 @@ class SettingsScreen extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(
-            leading: const Icon(Icons.dark_mode, color: Colors.white),
+            leading: const Icon(Icons.circle, color: Colors.white, size: 50),
             title: const Text(
-              'Dark Mode',
+              'Anakin SkyWalker',
               style: TextStyle(
                 color: Colors.white,
               ),
@@ -63,40 +54,50 @@ class SettingsScreen extends StatelessWidget {
               // Handles menu item tap, shows animation that the button has been clicked
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.folder, color: Colors.white),
-            title: const Text(
-              'Photos and Media',
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-            onTap: () {
-              // Handle menu item tap, shows animation that the button has been clicked
-            },
-          ),
-          ListTile(
-            leading: const Icon(
-              Icons.notifications,
+          const SizedBox(height: 50),
+          const Text(
+            "    Group Tasks",
+            style: TextStyle(
               color: Colors.white,
+              fontSize: 18,
             ),
-            title: const Text(
-              'Notifications and Sounds',
-              style: TextStyle(
-                color: Colors.white,
-              ),
+          ),
+          ListTile(
+            title: Row(
+              children: [
+                Icon(Icons.circle, color: Colors.white, size: 50),
+                Transform.translate(
+                  offset: Offset(0, 10),
+                  child: Icon(Icons.circle, color: Colors.white, size: 50),
+                ),
+                Icon(Icons.circle, color: Colors.white, size: 50),
+                const SizedBox(width: 8),
+                const Text(
+                  'Mobile Computing',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
             ),
             onTap: () {
               // Handle menu item tap, shows animation that the button has been clicked
             },
           ),
+          const SizedBox(height: 30),
           ListTile(
-            leading: const Icon(Icons.flag, color: Colors.white),
-            title: const Text(
-              'Report Technical Problem',
-              style: TextStyle(
-                color: Colors.white,
-              ),
+            title: Row(
+              children: [
+                Icon(Icons.circle, color: Colors.white, size: 50),
+                Transform.translate(
+                  offset: Offset(0, 10),
+                  child: Icon(Icons.circle, color: Colors.white, size: 50),
+                ),
+                Icon(Icons.circle, color: Colors.white, size: 50),
+                const SizedBox(width: 8),
+                const Text(
+                  'Research Methods',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
             ),
             onTap: () {
               // Handle menu item tap, shows animation that the button has been clicked
@@ -112,7 +113,7 @@ class SettingsScreen extends StatelessWidget {
           unselectedItemColor: Colors.white,
           selectedLabelStyle: TextStyle(fontSize: 0),
           unselectedLabelStyle: TextStyle(fontSize: 0),
-          currentIndex: 2,
+          currentIndex: 1,
           // this widget is used to create a Navigation Bar in the bottom of the App
           items: const [
             BottomNavigationBarItem(
