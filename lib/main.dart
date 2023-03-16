@@ -1,4 +1,5 @@
 import 'package:campus_link/ui/task.dart';
+import 'package:campus_link/ui/task2.dart';
 import 'package:flutter/material.dart';
 import 'ui/settings.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,7 +11,7 @@ void main() {
       builder: (BuildContext context) {
         return MaterialApp(
           title: 'My App',
-          home: const TaskScreen(),
+          home: const SettingsScreen(),
           theme: ThemeData(
             textTheme: GoogleFonts.openSansTextTheme(
               Theme.of(context).textTheme,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /* Renz de Sierra
 Team: Fullsnack Devs
@@ -18,7 +17,7 @@ class TaskScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('TASKS'),
-        backgroundColor: Color(0xFF292F3F), // sets the background color
+        backgroundColor: const Color(0xFF292F3F), // sets the background color
         elevation: 0, // removes the shadow
         bottom: PreferredSize(
           preferredSize:
@@ -65,12 +64,13 @@ class TaskScreen extends StatelessWidget {
           ListTile(
             title: Row(
               children: [
-                Icon(Icons.circle, color: Colors.white, size: 50),
+                const Icon(Icons.circle, color: Colors.white, size: 50),
                 Transform.translate(
-                  offset: Offset(0, 10),
-                  child: Icon(Icons.circle, color: Colors.white, size: 50),
+                  offset: const Offset(0, 10),
+                  child:
+                      const Icon(Icons.circle, color: Colors.white, size: 50),
                 ),
-                Icon(Icons.circle, color: Colors.white, size: 50),
+                const Icon(Icons.circle, color: Colors.white, size: 50),
                 const SizedBox(width: 8),
                 const Text(
                   'Mobile Computing',
@@ -86,12 +86,13 @@ class TaskScreen extends StatelessWidget {
           ListTile(
             title: Row(
               children: [
-                Icon(Icons.circle, color: Colors.white, size: 50),
+                const Icon(Icons.circle, color: Colors.white, size: 50),
                 Transform.translate(
-                  offset: Offset(0, 10),
-                  child: Icon(Icons.circle, color: Colors.white, size: 50),
+                  offset: const Offset(0, 10),
+                  child:
+                      const Icon(Icons.circle, color: Colors.white, size: 50),
                 ),
-                Icon(Icons.circle, color: Colors.white, size: 50),
+                const Icon(Icons.circle, color: Colors.white, size: 50),
                 const SizedBox(width: 8),
                 const Text(
                   'Research Methods',
@@ -108,11 +109,11 @@ class TaskScreen extends StatelessWidget {
       backgroundColor: const Color(0xFF292F3F),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Color(0xFF292F3F),
+          backgroundColor: const Color(0xFF292F3F),
           selectedItemColor: Colors.blueAccent,
           unselectedItemColor: Colors.white,
-          selectedLabelStyle: TextStyle(fontSize: 0),
-          unselectedLabelStyle: TextStyle(fontSize: 0),
+          selectedLabelStyle: const TextStyle(fontSize: 0),
+          unselectedLabelStyle: const TextStyle(fontSize: 0),
           currentIndex: 1,
           // this widget is used to create a Navigation Bar in the bottom of the App
           items: const [

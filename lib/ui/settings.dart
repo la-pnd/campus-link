@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /* Renz de Sierra
 Team: Fullsnack Devs
@@ -16,10 +15,11 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isSwitched = false;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Settings'),
-        backgroundColor: Color(0xFF292F3F), // sets the background color
+        backgroundColor: const Color(0xFF292F3F), // sets the background color
         elevation: 0, // removes the shadow
         bottom: PreferredSize(
           preferredSize:
@@ -62,6 +62,14 @@ class SettingsScreen extends StatelessWidget {
             onTap: () {
               // Handles menu item tap, shows animation that the button has been clicked
             },
+            trailing: Switch(
+              value: isSwitched,
+              onChanged: (value) {
+                setState(() {
+                  isSwitched = value;
+                });
+              },
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.folder, color: Colors.white),
@@ -74,6 +82,10 @@ class SettingsScreen extends StatelessWidget {
             onTap: () {
               // Handle menu item tap, shows animation that the button has been clicked
             },
+            trailing: const Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            ),
           ),
           ListTile(
             leading: const Icon(
@@ -89,6 +101,10 @@ class SettingsScreen extends StatelessWidget {
             onTap: () {
               // Handle menu item tap, shows animation that the button has been clicked
             },
+            trailing: const Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.flag, color: Colors.white),
@@ -101,23 +117,27 @@ class SettingsScreen extends StatelessWidget {
             onTap: () {
               // Handle menu item tap, shows animation that the button has been clicked
             },
+            trailing: const Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            ),
           ),
         ],
       ),
       backgroundColor: const Color(0xFF292F3F),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Color(0xFF292F3F),
+          backgroundColor: const Color(0xFF292F3F),
           selectedItemColor: Colors.blueAccent,
           unselectedItemColor: Colors.white,
-          selectedLabelStyle: TextStyle(fontSize: 0),
-          unselectedLabelStyle: TextStyle(fontSize: 0),
+          selectedLabelStyle: const TextStyle(fontSize: 0),
+          unselectedLabelStyle: const TextStyle(fontSize: 0),
           currentIndex: 2,
           // this widget is used to create a Navigation Bar in the bottom of the App
           items: const [
             BottomNavigationBarItem(
               label: "",
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.mode_comment),
             ),
             BottomNavigationBarItem(
               label: "",
@@ -135,4 +155,6 @@ class SettingsScreen extends StatelessWidget {
           onTap: (int indexOfItem) {}),
     );
   }
+
+  void setState(Null Function() param0) {}
 }
