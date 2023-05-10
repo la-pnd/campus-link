@@ -136,21 +136,11 @@ class SettingsScreen extends StatelessWidget {
           // this widget is used to create a Navigation Bar in the bottom of the App
           items: const [
             BottomNavigationBarItem(
-              label: "",
-              icon: Icon(Icons.mode_comment),
-            ),
+                icon: Icon(Icons.mode_comment), label: 'home'),
             BottomNavigationBarItem(
-              label: "",
-              icon: Icon(Icons.inventory_2),
-            ),
-            BottomNavigationBarItem(
-              label: "",
-              icon: Icon(Icons.settings),
-            ),
-            BottomNavigationBarItem(
-              label: "",
-              icon: Icon(Icons.account_circle),
-            ),
+                icon: Icon(Icons.inventory_2), label: 'home'),
+            BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'home'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'home')
           ],
           onTap: (int indexOfItem) {}),
     );
